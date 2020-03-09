@@ -1,0 +1,19 @@
+<% unless notice.nil? %>
+  <div class="alert col-md-12 alert-info alert-dismissible fade show" role="alert">
+    <strong>Message </strong>
+    <a class="navbar-brand" href="#">TODO App</a>
+    <%= notice %>
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+<% end %>
+<% unless alert.nil? %>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Alert</strong>
+    <%= alert %>
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+<% end %>
