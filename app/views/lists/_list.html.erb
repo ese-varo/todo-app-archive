@@ -1,0 +1,43 @@
+<% obj.each do |list| %>
+<div class="card col" style="margin-bottom: 20px;">
+  <div class="card-body">
+    <h2 class=card-title">
+      <%= link_to list.title, list_path(list) %>
+    </h2>
+        <div class="row">
+          <div class="offset-md-2 col-md-8">
+            <div class="card text-center">
+              <div class="card-header">
+                Pending
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Super title
+                </h5>
+                <p class="card-text">This is going to be a great project!</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+              <div class="card-footer text-muted">
+                1 day ago
+              </div>
+            </div>
+          </div>
+        </div>
+    <% if list.tasks.any? %>
+      <% list.tasks.each do |task| %>
+      <% end %>
+    <% end %>
+    <div class="row justify-content-center list-actions"> 
+      <div class="col-md-auto">
+        <%= link_to "Edit this list", edit_list_path(list),
+                    class: "btn btn-outline-primary btn-sm" %>
+      </div>
+      <div class="col-md-auto">
+        <%= link_to "Delete this list", list_path(list), method: :delete, data:
+                    { confirm: "Are you sure you want to delete the list? " },
+                    class: "btn btn-outline-danger btn-sm" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
