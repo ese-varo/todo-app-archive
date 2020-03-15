@@ -4,6 +4,7 @@
     <h2 class=card-title">
       <%= link_to list.title, list_path(list) %>
     </h2>
+    <p>Created by: <%= list.user.name %></p>
         <div class="row">
           <div class="offset-md-2 col-md-8">
             <div class="card text-center">

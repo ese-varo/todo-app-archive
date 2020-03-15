@@ -12,7 +12,7 @@
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Lists ", lists_path, class: "nav-link" %>
+            <%= link_to "Lists ", users_index_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Create a List", new_list_path, class: "nav-link" %>
@@ -39,6 +39,11 @@
         </ul>
       <% else %>
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to new_user_registration_path, class:"nav-link" do %>
+              <span style="margin-left: 1px">Sign up</span>
+            <% end %>
+          </li>
           <li class="nav-item">
             <%= link_to new_user_session_path, class:"nav-link" do %>
               <i class="fa fa-user fa-fw"></i>
