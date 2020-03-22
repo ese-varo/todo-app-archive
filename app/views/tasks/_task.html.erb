@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="offset-md-2 col-md-8">
+    <div class="card text-center" style="margin: 15px 0">
+      <div class="card-header">
+        Pending
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= task.title%>
+        </h5>
+        <p class="card-text"><%= task.content %></p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <%= link_to "Delete", list_task_path(@list, @task.id),
+            method: :delete, data: { confirm: "Are you sure?" },
+            class: 'btn btn-outline-danger' %>
+      </div>
+      <div class="card-footer text-muted">
+        1 day ago
+      </div>
+    </div>
+  </div>
+</div>

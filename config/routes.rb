@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  resources :lists, :tasks
+  resources :lists do
+    resources :tasks
+  end
 
   root to: 'welcome#index'
 end

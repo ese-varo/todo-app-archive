@@ -1,2 +1,5 @@
-<h2 align="center">Title: <%= @list.title %><h2>
-<p>Created by: <%= @list.user.name %></p>
+<div class="container">
+  <div align='center'>
+    <%= render partial: 'partials/list', locals: {list: @list} %>
+  </div>
+</div>

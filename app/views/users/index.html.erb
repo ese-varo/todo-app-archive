@@ -1,8 +1,8 @@
 <div class="container">
-  <h1 align="center">
+  <h1 align="center" class='my-3'>
     <%= "#{current_user.name} lists" %>
   </h1>
   <div align="center">
-    <%= render 'partials/list', obj: @lists %>
+    <%= render partial: 'partials/list', collection: @lists %>
   </div>
 </div>
